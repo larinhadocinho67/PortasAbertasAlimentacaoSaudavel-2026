@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Alimentação Saudável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="img/linkrel.jpg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação Superior -->
+    <header class="menu" id="topo">
+        <div class="center">
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-lista">
+                <span class="barra"></span>
+                <span class="barra"></span>
+                <span class="barra"></span>
+            </button>
+            <ul id="menu-lista">
+                <li><a href="index.html" target="iframeprincipal">HOME</a></li>
+                <li><a href="sobre.html" target="iframeprincipal">SOBRE</a></li>
+                <li><a href="problemas.html" target="iframeprincipal">RISCOS</a></li>
+                <li class="menu-dropdown">
+                    <span class="menu-item-wrapper">
+                        <a href="creditos.html" target="iframeprincipal">CRÉDITOS</a>
+                        <button type="button" class="seta-dropdown" aria-label="Mostrar submenu de créditos" aria-expanded="false">&#9662;</button>
+                    </span>
+                    <ul class="submenu">
+                        <li><a href="creditos.html#painel-professores" target="iframeprincipal">Orientadores</a></li>
+                        <li><a href="creditos.html#painel-alunos" target="iframeprincipal">Desenvolvedores</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html" target="iframeprincipal">CONTATO</a></li>
+            </ul>
+            <div class="menu-idiomas">
+                <a href="contato.html" class="bandeira-link ativa" title="Português (Brasil)" aria-label="Ver site em português"><svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="28" height="20" fill="#009B3A"/><polygon points="14,2.5 26,10 14,17.5 2,10" fill="#FEDF00"/><circle cx="14" cy="10" r="4.3" fill="#002776"/></svg></a>
+                <a href="contatousa.html" class="bandeira-link" title="English (USA)" aria-label="View site in English"><svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="28" height="20" fill="#B22234"/><g fill="#ffffff"><rect y="1.54" width="28" height="1.54"/><rect y="4.62" width="28" height="1.54"/><rect y="7.69" width="28" height="1.54"/><rect y="10.77" width="28" height="1.54"/><rect y="13.85" width="28" height="1.54"/><rect y="16.92" width="28" height="1.54"/></g><rect width="12" height="10.77" fill="#3C3B6E"/></svg></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+
+        <section class="secao-header centro titulo-contato">
+            <h2>Fale Conosco</h2>
+        </section>
+
+        <section class="secao-destaque">
+            <div class="secao-header">
+                <h2>Formulário de Contato</h2>
+                <p class="subtitulo-secao">Preencha os campos obrigatórios (*)</p>
+            </div>
+
+            <form name="formContato" onsubmit="return processaform()" method="post">
+                <table border="0" cellpadding="8" cellspacing="0" class="tabela-contato">
+                    <tr>
+                        <td><label for="nome"><b>Nome:</b> <span class="obrigatorio">*</span></label></td>
+                        <td><input type="text" id="nome" name="nome" size="30" maxlength="60" placeholder="Seu nome" required>
+                            <span class="dica" id="dica-nome" aria-live="polite"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefone"><b>Telefone:</b> <span class="obrigatorio">*</span></label></td>
+                        <td><input type="text" id="telefone" name="telefone" size="20" maxlength="11" inputmode="numeric" placeholder="11 números, com DDD" required>
+                            <span class="dica" id="dica-telefone" aria-live="polite"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email"><b>Email:</b> <span class="obrigatorio">*</span></label></td>
+                        <td><input type="text" id="email" name="email" size="30" maxlength="60" placeholder="voce@exemplo.com" required>
+                            <span class="dica" id="dica-email" aria-live="polite"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="avaliacao"><b>Avaliação:</b> <span class="obrigatorio">*</span></label></td>
+                        <td>
+                            <select id="avaliacao" name="avaliacao" required>
+                                <option value="">Selecione...</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <span class="dica" id="dica-avaliacao" aria-live="polite"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><label for="obs"><b>Sugestões/comentários:</b></label> <span class="opcional">(opcional)</span></td>
+                        <td><textarea id="obs" name="obs" rows="5" cols="40" placeholder="Escreva aqui sua sugestão ou comentário" style="resize: none;"></textarea>
+                            <span class="dica" id="dica-obs" aria-live="polite"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Enviar" class="botao-enviar" onclick="return validar()">
+                            &nbsp;
+                            <input type="reset" value="Limpar" class="botao-limpar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-center">
+            <h5><strong>ETEC HUMBERTO FERÚCIO GAZETTA 2026 - &copyTodos os direitos reservados<br> 
+                Trabalho acadêmico sem fins lucrativos </strong></h5>
+            
+        </div>
+    </footer>
+
+    <!-- Script do Submenu (Dropdown) de Créditos -->
+    <script>
+        (function () {
+            var itemDropdown = document.querySelector('.menu-dropdown');
+            var botaoSeta = document.querySelector('.seta-dropdown');
+
+            if (!itemDropdown || !botaoSeta) return;
+
+            function fecharDropdown() {
+                itemDropdown.classList.remove('aberto');
+                botaoSeta.setAttribute('aria-expanded', 'false');
+            }
+
+            botaoSeta.addEventListener('click', function (evento) {
+                evento.preventDefault();
+                evento.stopPropagation();
+                var estaAberto = itemDropdown.classList.toggle('aberto');
+                botaoSeta.setAttribute('aria-expanded', estaAberto ? 'true' : 'false');
+            });
+
+            document.addEventListener('click', function (evento) {
+                if (!itemDropdown.contains(evento.target)) {
+                    fecharDropdown();
+                }
+            });
+
+            document.addEventListener('keydown', function (evento) {
+                if (evento.key === 'Escape') {
+                    fecharDropdown();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Botão Voltar ao Topo -->
+    <button type="button" id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+    <script>
+        (function () {
+            var btnTopo = document.getElementById('btn-topo');
+            var cabecalho = document.getElementById('topo');
+
+            function verificarScroll() {
+                // Quanto a página ainda consegue rolar (em telas grandes, a página de contato é curta)
+                var rolavel = document.documentElement.scrollHeight - window.innerHeight;
+                // Aparece depois de 250px; em páginas curtas, na metade do que dá para rolar
+                var limite = Math.max(30, Math.min(250, rolavel / 2));
+
+                if (rolavel > 40 && window.scrollY > limite) {
+                    btnTopo.classList.add('visivel');
+                } else {
+                    btnTopo.classList.remove('visivel');
+                }
+            }
+
+            window.addEventListener('scroll', verificarScroll);
+            window.addEventListener('resize', verificarScroll);
+            verificarScroll();
+
+            btnTopo.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if (cabecalho && typeof cabecalho.focus === 'function') {
+                    cabecalho.setAttribute('tabindex', '-1');
+                    cabecalho.focus({ preventScroll: true });
+                }
+            });
+        })();
+    </script>
+
+    <!-- Script de Validação do Formulário -->
+    <script>
+
+        // ---------- Mensagens de ajuda em tempo real (embaixo de cada campo) ----------
+        // tipo: '' (cinza, informação), 'erro' (vermelho) ou 'ok' (verde)
+        function mostrarDica(id, texto, tipo) {
+            var el = document.getElementById(id);
+            el.textContent = texto;
+            el.className = 'dica' + (tipo ? ' ' + tipo : '');
+        }
+
+        var DICAS = {
+            nome:      'Use somente letras e espaços (sem números ou símbolos).',
+            telefone:  'Somente números, com DDD (11 dígitos).',
+            email:     'O email precisa ter @ (ex.: voce@exemplo.com).',
+            obs:       'Opcional: escreva o que quiser.',
+            avaliacao: 'Escolha uma nota de 0 a 5.'
+        };
+
+        function dicasIniciais() {
+            mostrarDica('dica-nome', DICAS.nome);
+            mostrarDica('dica-telefone', DICAS.telefone);
+            mostrarDica('dica-email', DICAS.email);
+            mostrarDica('dica-obs', DICAS.obs);
+            mostrarDica('dica-avaliacao', DICAS.avaliacao);
+        }
+        dicasIniciais();
+
+        // Ao limpar o formulário, as mensagens voltam ao começo
+        formContato.addEventListener('reset', function () {
+            setTimeout(dicasIniciais, 0);
+        });
+
+        // Nome: impede números e símbolos e avisa na hora
+        formContato.nome.addEventListener('input', function () {
+            var limpo = this.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, '');
+            var removeu = limpo !== this.value;
+            this.value = limpo;
+
+            if (removeu) {
+                mostrarDica('dica-nome', 'Números e símbolos não podem! Use só letras.', 'erro');
+            } else if (limpo.trim() !== '') {
+                mostrarDica('dica-nome', 'Nome válido.', 'ok');
+            } else {
+                mostrarDica('dica-nome', DICAS.nome);
+            }
+        });
+
+        // Telefone: só números, no máximo 11, com contador
+        formContato.telefone.addEventListener('input', function () {
+            var soNumeros = this.value.replace(/\D/g, '');
+            var tinhaOutraCoisa = soNumeros !== this.value;
+            var digitos = soNumeros.slice(0, 11);
+            this.value = digitos;
+
+            if (tinhaOutraCoisa) {
+                mostrarDica('dica-telefone', 'Só números! Letras, espaços e símbolos não podem.', 'erro');
+            } else if (soNumeros.length > 11) {
+                mostrarDica('dica-telefone', 'O telefone tem no máximo 11 dígitos.', 'erro');
+            } else if (digitos.length === 11) {
+                mostrarDica('dica-telefone', 'Telefone completo (11 dígitos).', 'ok');
+            } else if (digitos.length > 0) {
+                mostrarDica('dica-telefone', digitos.length + ' de 11 dígitos.');
+            } else {
+                mostrarDica('dica-telefone', DICAS.telefone);
+            }
+        });
+
+        // Telefone: avisa quando tenta digitar depois do 11º número
+        formContato.telefone.addEventListener('keydown', function (evento) {
+            if (/^\d$/.test(evento.key) && this.value.length >= 11 && this.selectionStart === this.selectionEnd) {
+                mostrarDica('dica-telefone', 'Limite de 11 dígitos atingido.', 'erro');
+            }
+        });
+
+        // Email: confirma quando tem @ e avisa se sair do campo sem ele
+        formContato.email.addEventListener('input', function () {
+            if (this.value.indexOf('@') !== -1) {
+                mostrarDica('dica-email', 'Tem @, tudo certo.', 'ok');
+            } else {
+                mostrarDica('dica-email', DICAS.email);
+            }
+        });
+
+        formContato.email.addEventListener('blur', function () {
+            if (this.value.trim() !== '' && this.value.indexOf('@') === -1) {
+                mostrarDica('dica-email', 'Falta o @ no email.', 'erro');
+            }
+        });
+
+        // Avaliação: mostra a nota escolhida
+        formContato.avaliacao.addEventListener('change', function () {
+            if (this.value === '') {
+                mostrarDica('dica-avaliacao', DICAS.avaliacao);
+            } else {
+                mostrarDica('dica-avaliacao', 'Você deu nota ' + this.value + '.', 'ok');
+            }
+        });
+
+        function validar() {
+            var nome     = formContato.nome.value.trim();
+            var telefone = formContato.telefone.value.trim();
+            var email    = formContato.email.value.trim();
+
+            var regexNome     = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+            var regexTelefone = /^[0-9]{11}$/;
+
+            if (nome == "" || !regexNome.test(nome)) {
+                alert('Por favor, preencha um nome válido (somente letras)! (๑>ᴗ<๑)');
+                formContato.nome.focus();
+                return false;
+            }
+            if (telefone == "" || !regexTelefone.test(telefone)) {
+                alert('Por favor, preencha um telefone válido com 11 números! (๑>ᴗ<๑)');
+                formContato.telefone.focus();
+                return false;
+            }
+            if (email == "" || email.indexOf('@') === -1) {
+                alert('Por favor, preencha um email válido (deve conter @)! (๑>ᴗ<๑)');
+                formContato.email.focus();
+                return false;
+            }
+            if (formContato.avaliacao.value === "") {
+                mostrarDica('dica-avaliacao', 'Escolha uma nota de 0 a 5.', 'erro');
+                alert('Por favor, escolha uma nota de 0 a 5! (๑>ᴗ<๑)');
+                formContato.avaliacao.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function processaform() {
+            if (validar()) {
+                alert('Mensagem enviada com sucesso! Obrigado pelo contato. ~(=^‥^)_旦~');
+                formContato.reset();
+            }
+            return false;
+        }
+
+    </script>
+
+    
+    <!-- Script do Menu Hambúrguer (celular) -->
+    <script>
+        (function () {
+            var menu = document.getElementById('topo');
+            var botao = menu ? menu.querySelector('.menu-toggle') : null;
+            if (!menu || !botao) return;
+
+            function fecharMenu() {
+                menu.classList.remove('menu-aberto');
+                botao.setAttribute('aria-expanded', 'false');
+            }
+
+            botao.addEventListener('click', function (evento) {
+                evento.stopPropagation();
+                var aberto = menu.classList.toggle('menu-aberto');
+                botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+            });
+
+            // Clicar fora do menu fecha
+            document.addEventListener('click', function (evento) {
+                if (!menu.contains(evento.target)) {
+                    fecharMenu();
+                }
+            });
+
+            // ESC fecha
+            document.addEventListener('keydown', function (evento) {
+                if (evento.key === 'Escape') {
+                    fecharMenu();
+                }
+            });
+
+            // Se a tela voltar a ser grande (ex.: girar o celular), fecha o menu
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    fecharMenu();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

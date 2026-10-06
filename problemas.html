@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas - Alimentação Saudável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="img/linkrel.jpg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body> 
+
+    <!-- Menu de Navegação Superior -->
+    <header class="menu" id="topo">
+        <div class="center">
+            <button type="button" class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-lista">
+                <span class="barra"></span>
+                <span class="barra"></span>
+                <span class="barra"></span>
+            </button>
+            <ul id="menu-lista">
+                <li><a href="index.html" target="iframeprincipal">HOME</a></li>
+                <li><a href="sobre.html" target="iframeprincipal">SOBRE</a></li>
+                <li><a href="problemas.html" target="iframeprincipal">RISCOS</a></li>
+                <li class="menu-dropdown">
+                    <span class="menu-item-wrapper">
+                        <a href="creditos.html" target="iframeprincipal">CRÉDITOS</a>
+                        <button type="button" class="seta-dropdown" aria-label="Mostrar submenu de créditos" aria-expanded="false">&#9662;</button>
+                    </span>
+                    <ul class="submenu">
+                        <li><a href="creditos.html#painel-professores" target="iframeprincipal">Orientadores</a></li>
+                        <li><a href="creditos.html#painel-alunos" target="iframeprincipal">Desenvolvedores</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html" target="iframeprincipal">CONTATO</a></li>
+            </ul>
+            <div class="menu-idiomas">
+                <a href="problemas.html" class="bandeira-link ativa" title="Português (Brasil)" aria-label="Ver site em português"><svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="28" height="20" fill="#009B3A"/><polygon points="14,2.5 26,10 14,17.5 2,10" fill="#FEDF00"/><circle cx="14" cy="10" r="4.3" fill="#002776"/></svg></a>
+                <a href="problemasusa.html" class="bandeira-link" title="English (USA)" aria-label="View site in English"><svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="28" height="20" fill="#B22234"/><g fill="#ffffff"><rect y="1.54" width="28" height="1.54"/><rect y="4.62" width="28" height="1.54"/><rect y="7.69" width="28" height="1.54"/><rect y="10.77" width="28" height="1.54"/><rect y="13.85" width="28" height="1.54"/><rect y="16.92" width="28" height="1.54"/></g><rect width="12" height="10.77" fill="#3C3B6E"/></svg></a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="tag-evento alerta-tag">Consequências & Saúde</span>
+            <h1 class="titulo">Problemas de Saúde</h1>
+            <p class="subtitulo-hero">O impacto silencioso dos maus hábitos no corpo humano</p>
+            <p class="hero-texto">
+                Manter uma alimentação ruim por muito tempo pode causar sérios problemas de saúde. A falta de nutrientes vitais e o excesso de gorduras e açúcares facilitam o surgimento de várias doenças graves que afetam a qualidade e o tempo de vida.
+            </p>
+        </div>
+        <div class="foto-container hero-foto">
+            <img src="img/foto6.jpg" alt="Exames de saúde e cuidados médicos">
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+
+        <!-- Link para o Guia Alimentar (PDF) -->
+        <section class="guia-box">
+            <div class="guia-icone" aria-hidden="true">𔓐𑇓</div>
+            <div class="guia-texto">
+                <h2>Guia Alimentar para a População Brasileira</h2>
+                <p class="subtitulo-secao">Publicação do Ministério da Saúde, 2014</p>
+                <p>Quer entender melhor como uma alimentação de verdade protege a saúde? Leia o guia oficial do Ministério da Saúde.</p>
+            </div>
+            <a class="botao-guia" href="guia-alimentar-para-a-populacao-brasileira_2014.pdf" target="_blank" rel="noopener">Abrir o guia em PDF</a>
+        </section>
+
+        <section class="secao-header centro">
+            <h2>Principais Doenças Relacionadas à Má Alimentação</h2>
+            <p class="subtitulo-secao">Entenda o que acontece quando o corpo não recebe o combustível correto</p>
+        </section>
+
+        <!-- Grid de Cards com as Doenças -->
+        <div class="cards-grid grid-doencas">
+            
+            <div class="card-item card-doenca">
+                <div class="card-tag">01</div>
+                <h3>Diabetes Tipo 2</h3>
+                <p>Ocorre quando os níveis de açúcar no sangue ficam muito altos. É algo muito comum em quem consome doces e carboidratos refinados em excesso.</p>
+            </div>
+
+            <div class="card-item card-doenca">
+                <div class="card-tag">02</div>
+                <h3>Anemia</h3>
+                <p>Acontece quando o corpo não recebe a quantidade necessária de ferro e vitaminas vitais, deixando a pessoa fraca, cansada e sem energia para o dia a dia.</p>
+            </div>
+
+            <div class="card-item card-doenca">
+                <div class="card-tag">03</div>
+                <h3>Pressão Alta (Hipertensão)</h3>
+                <p>Está diretamente ligada ao consumo exagerado de sal e sódio, presentes principalmente em temperos prontos, ultraprocessados e comidas industrializadas.</p>
+            </div>
+
+            <div class="card-item card-doenca">
+                <div class="card-tag">04</div>
+                <h3>Problemas no Coração</h3>
+                <p>Ocorrem pelo acúmulo de gordura nos vasos sanguíneos vinda da má alimentação, o que pode entupir as artérias e aumentar drasticamente o risco de infarto.</p>
+            </div>
+
+            <div class="card-item card-doenca">
+                <div class="card-tag">05</div>
+                <h3>Gastrite</h3>
+                <p>Surge ao comer em horários irregulares, pular refeições ou ingerir muita gordura e condimentos irritantes, afetando diretamente a mucosa do estômago.</p>
+            </div>
+
+            <div class="card-item card-doenca">
+                <div class="card-tag">06</div>
+                <h3>Obesidade</h3>
+                <p>Desenvolve-se pelo consumo descontrolado de calorias vazias, açúcares e gorduras ruins, levando ao ganho de peso desproporcional e inflamação geral do corpo.</p>
+            </div>
+
+        </div>
+
+        <!-- Seção de Conscientização/Aviso -->
+        <section class="secao-destaque aviso-box">
+            <div class="secao-header">
+                <h2>A Boa Notícia: Prevenção é o Caminho</h2>
+                <p class="subtitulo-secao">Pequenas mudanças diárias evitam grandes complicações futuras</p>
+            </div>
+            <p>A maioria dessas condições pode ser evitada ou controlada apenas ajustando o que vai ao prato e adotando uma rotina mais ativa. Priorizar alimentos naturais é o investimento mais barato e eficiente na sua longevidade.</p>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-center">
+            <h5><strong>ETEC HUMBERTO FERÚCIO GAZETTA 2026 - &copyTodos os direitos reservados<br> 
+                Trabalho acadêmico sem fins lucrativos<h5>
+        </div>
+    </footer>
+
+    <!-- Script do Submenu (Dropdown) de Créditos -->
+    <script>
+        (function () {
+            var itemDropdown = document.querySelector('.menu-dropdown');
+            var botaoSeta = document.querySelector('.seta-dropdown');
+
+            if (!itemDropdown || !botaoSeta) return;
+
+            function fecharDropdown() {
+                itemDropdown.classList.remove('aberto');
+                botaoSeta.setAttribute('aria-expanded', 'false');
+            }
+
+            botaoSeta.addEventListener('click', function (evento) {
+                evento.preventDefault();
+                evento.stopPropagation();
+                var estaAberto = itemDropdown.classList.toggle('aberto');
+                botaoSeta.setAttribute('aria-expanded', estaAberto ? 'true' : 'false');
+            });
+
+            document.addEventListener('click', function (evento) {
+                if (!itemDropdown.contains(evento.target)) {
+                    fecharDropdown();
+                }
+            });
+
+            document.addEventListener('keydown', function (evento) {
+                if (evento.key === 'Escape') {
+                    fecharDropdown();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Botão Voltar ao Topo -->
+    <button type="button" id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">&#9650;</button>
+
+    <script>
+        (function () {
+            var btnTopo = document.getElementById('btn-topo');
+            var cabecalho = document.getElementById('topo');
+
+            function verificarScroll() {
+                if (window.scrollY > 250) {
+                    btnTopo.classList.add('visivel');
+                } else {
+                    btnTopo.classList.remove('visivel');
+                }
+            }
+
+            window.addEventListener('scroll', verificarScroll);
+            verificarScroll();
+
+            btnTopo.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if (cabecalho && typeof cabecalho.focus === 'function') {
+                    cabecalho.setAttribute('tabindex', '-1');
+                    cabecalho.focus({ preventScroll: true });
+                }
+            });
+        })();
+    </script>
+
+    <!-- Script do Menu Hambúrguer (celular) -->
+    <script>
+        (function () {
+            var menu = document.getElementById('topo');
+            var botao = menu ? menu.querySelector('.menu-toggle') : null;
+            if (!menu || !botao) return;
+
+            function fecharMenu() {
+                menu.classList.remove('menu-aberto');
+                botao.setAttribute('aria-expanded', 'false');
+            }
+
+            botao.addEventListener('click', function (evento) {
+                evento.stopPropagation();
+                var aberto = menu.classList.toggle('menu-aberto');
+                botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+            });
+
+            // Clicar fora do menu fecha
+            document.addEventListener('click', function (evento) {
+                if (!menu.contains(evento.target)) {
+                    fecharMenu();
+                }
+            });
+
+            // ESC fecha
+            document.addEventListener('keydown', function (evento) {
+                if (evento.key === 'Escape') {
+                    fecharMenu();
+                }
+            });
+
+            // Se a tela voltar a ser grande (ex.: girar o celular), fecha o menu
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    fecharMenu();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
